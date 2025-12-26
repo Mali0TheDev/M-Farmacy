@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/images/Favorite_Icon.png">
+    
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <title>M-Farmacy | المدونة</title>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <nav class="nav-left">
+                <a href="index.html" class="nav-link">الرئيسية</a> 
+                <a href="about_us.html" class="nav-link">من نحن</a>
+                <a href="blog.html" class="nav-link active">المدونة</a>
+                <a href="products.html" class="nav-link">المنتجات</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </nav>
+
+            <div class="nav-middle">
+                <a href="index.html">
+                    <img src="assets/images/Logo.png" alt="Logo" class="header-logo">
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="بحث ...">
+                </div>
+                
+                <div class="icon-group desktop-only">
+                    <a href="#" class="login-link">
+                        <i class="fa-regular fa-user"></i>
+                        <span>تسجيل الدخول</span>
+                    </a>
+                    <a href="#" class="icon-link">
+                        <i class="fa-solid fa-gift"></i>
+                    </a>
+                    <a href="#" class="cart-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <aside class="mobile-sidebar" id="sidebar">
+        <div class="close-menu" id="close-btn">&times;</div>
+        <div class="sidebar-section">
+            <h4>الصفحات</h4>
+            <a href="index.html">الرئيسية</a>
+            <a href="about_us.html">من نحن</a>
+            <a href="blog.html" class="active">المدونة</a>
+            <a href="products.html">المنتجات</a>
+            <a href="contact.html">اتصل بنا</a>
+        </div>
+        <hr>
+        <div class="sidebar-section">
+            <h4>الحساب والأدوات</h4>
+            <a href="#"><i class="fa-regular fa-user"></i> تسجيل الدخول</a>
+            <a href="#"><i class="fa-solid fa-gift"></i> الهدايا</a>
+            <a href="#" class="mobile-cart-trigger"><i class="fa-solid fa-bag-shopping"></i> عربة التسوق</a>
+        </div>
+    </aside>
+
+    <section class="blog-hero">
+        <h1>المدونة الصحية</h1>
+        <p>نصائح ومعلومات طبية موثوقة من قبل نخبة من الأطباء والصيادلة</p>
+    </section>
+
+    <main class="container">
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="assets/images/p1.png" alt="العناية بالبشرة">
+                </div>
+                <div class="blog-content">
+                    <span class="category">عناية بالبشرة</span>
+                    <h3>5 نصائح للحفاظ على نضارة البشرة في الصيف</h3>
+                    <p>تعرفي على أهم الروتينات اليومية لحماية بشرتك من أشعة الشمس والجفاف خلال فصل الصيف...</p>
+                    <div class="blog-footer">
+                        <div class="author">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <span>د. سارة علي</span>
+                        </div>
+                        <a href="#" class="read-more" data-id="1">اقرأ المزيد</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="assets/images/p2.png" alt="المكملات الغذائية">
+                </div>
+                <div class="blog-content">
+                    <span class="category">تغذية</span>
+                    <h3>أهمية الفيتامينات لتقوية المناعة</h3>
+                    <p>هل تحتاج حقاً إلى المكملات الغذائية؟ اكتشف المصادر الطبيعية لأهم الفيتامينات التي يحتاجها جسمك...</p>
+                    <div class="blog-footer">
+                        <div class="author">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <span>د. محمد محمود</span>
+                        </div>
+                        <a href="#" class="read-more" data-id="2">اقرأ المزيد</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="assets/images/p3.png" alt="الصحة النفسية">
+                </div>
+                <div class="blog-content">
+                    <span class="category">صحة عامة</span>
+                    <h3>كيفية التعامل مع ضغوط العمل اليومية</h3>
+                    <p>خطوات بسيطة وعلمية لتقليل التوتر وتحسين جودة حياتك المهنية والنفسية بشكل ملحوظ...</p>
+                    <div class="blog-footer">
+                        <div class="author">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <span>د. ليلى حسن</span>
+                        </div>
+                        <a href="#" class="read-more" data-id="3">اقرأ المزيد</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div id="article-modal" class="modal-overlay">
+            <div class="modal-content">
+                <span class="close-modal" id="close-modal-btn">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+        <div class="cart-overlay" id="cart-overlay"></div>
+        <aside class="cart-sidebar" id="cart-sidebar">
+            <div class="cart-header">
+                <span class="close-cart" id="close-cart">&times;</span>
+                <h2>عربة التسوق</h2>
+            </div>
+            <div class="cart-body" id="cart-items-container">
+                </div>
+        </aside>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/images/Logo.png" alt="M-Farmacy Logo">
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 إم-فارمسي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    // 1. تعريف العناصر
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const sidebar = document.getElementById('sidebar');
+    const cartIcon = document.querySelector('.cart-icon');
+    const mobileCartTrigger = document.querySelector('.mobile-cart-trigger');
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const cartOverlay = document.getElementById('cart-overlay');
+    const closeCartBtn = document.getElementById('close-cart');
+    const cartBody = document.getElementById('cart-items-container');
+    const modal = document.getElementById('article-modal');
+    const modalBody = document.getElementById('modal-body');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+
+    // 2. بيانات المقالات
+    const articlesData = {
+        1: { title: "5 نصائح للحفاظ على نضارة البشرة في الصيف", author: "د. سارة علي", image: "assets/images/p1.png", content: "البشرة في الصيف تحتاج إلى عناية مضاعفة. أولاً، يجب استخدام واقي شمس بمعامل حماية عالي..." },
+        2: { title: "أهمية الفيتامينات لتقوية المناعة", author: "د. محمد محمود", image: "assets/images/p2.png", content: "المناعة هي خط الدفاع الأول. فيتامين C و D والزنك هم الثلاثي الأهم..." },
+        3: { title: "كيفية التعامل مع ضغوط العمل اليومية", author: "د. ليلى حسن", image: "assets/images/p3.png", content: "الضغط النفسي يؤثر على المناعة الجسدية. ننصح بتطبيق تقنية التنفس العميق..." }
+    };
+
+    // 3. وظائف السلة (تحديث وعرض)
+    function updateCartDisplay() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        if (cart.length === 0) {
+            cartBody.innerHTML = '<div style="flex:1; display:flex; align-items:center; justify-content:center; color:#888; height:200px;">السلة فارغة حالياً</div>';
+            return;
+        }
+
+        let total = 0;
+        let itemsHtml = cart.map((item, index) => {
+            let price = parseFloat(item.price) || 0;
+            let qty = parseInt(item.quantity) || 1;
+            total += price * qty;
+            return `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="item-details">
+                        <h4>${item.name}</h4>
+                        <span class="item-price">${price.toFixed(2)} د.ل</span>
+                        <div class="quantity-controls">
+                            <button class="qty-btn" onclick="changeQty(${index}, -1)">-</button>
+                            <input type="text" value="${qty}" readonly>
+                            <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-item" onclick="removeFromCart(${index})">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>`;
+        }).join('');
+
+        // وضع المنتجات والفوتر (الإجمالي والزر) في النهاية
+        cartBody.innerHTML = `
+            <div class="cart-scroll-area" style="flex:1; overflow-y:auto;">
+                ${itemsHtml}
+            </div>
+            <div class="cart-footer" style="padding:20px; border-top:1px solid #eee;">
+                <div style="display:flex; justify-content:space-between; font-weight:bold; margin-bottom:15px;">
+                    <span>الإجمالي:</span>
+                    <span>${total.toFixed(2)} د.ل</span>
+                </div>
+                <button class="checkout-btn" onclick="window.location.href='checkout.html'" style="width:100%; padding:12px; background:#2e955b; color:white; border:none; border-radius:8px; cursor:pointer;">إتمام الشراء</button>
+            </div>
+        `;
+    }
+
+    window.removeFromCart = function(index) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+    };
+
+    window.changeQty = function(index, delta) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let newQty = (parseInt(cart[index].quantity) || 1) + delta;
+        if (newQty > 0) {
+            cart[index].quantity = newQty;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+        }
+    };
+
+    // 4. أحداث القائمة والسلة
+    if(menuBtn) menuBtn.onclick = () => sidebar.classList.add('active');
+    if(closeBtn) closeBtn.onclick = () => sidebar.classList.remove('active');
+
+    const openCart = (e) => {
+        if(e) e.preventDefault();
+        updateCartDisplay();
+        cartSidebar.classList.add('active');
+        cartOverlay.classList.add('active');
+    };
+
+    const closeCart = () => {
+        cartSidebar.classList.remove('active');
+        cartOverlay.classList.remove('active');
+    };
+
+    if(cartIcon) cartIcon.onclick = openCart;
+    if(mobileCartTrigger) mobileCartTrigger.onclick = openCart;
+    if(closeCartBtn) closeCartBtn.onclick = closeCart;
+    if(cartOverlay) cartOverlay.onclick = closeCart;
+
+    // 5. أحداث المقالات
+    document.querySelectorAll('.read-more').forEach(button => {
+        button.onclick = (e) => {
+            e.preventDefault();
+            const artId = button.getAttribute('data-id');
+            const article = articlesData[artId];
+            if(article) {
+                modalBody.innerHTML = `
+                    <img src="${article.image}" style="width:100%; border-radius:15px; margin-bottom:20px;">
+                    <h2>${article.title}</h2>
+                    <p style="color:#2f8f57; font-weight:bold; margin-bottom:15px;">بواسطة: ${article.author}</p>
+                    <div style="line-height:1.8;">${article.content}</div>`;
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        };
+    });
+
+    const hideModal = () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    };
+
+    if(closeModalBtn) closeModalBtn.onclick = hideModal;
+    window.onclick = (event) => {
+        if (event.target == modal) hideModal();
+        if (event.target == cartOverlay) closeCart();
+        if (event.target == sidebar) sidebar.classList.remove('active');
+    };
+</script>
+</body>
+</html>

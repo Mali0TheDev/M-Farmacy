@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/images/Favorite_Icon.png">
+    
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <title>M-Farmacy | الصفحة الرئيسية</title>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <nav class="nav-left">
+                <a href="index.html" class="nav-link">الرئيسية</a> 
+                <a href="about_us.html" class="nav-link">من نحن</a>
+                <a href="blog.html" class="nav-link">المدونة</a>
+                <a href="products.html" class="nav-link">المنتجات</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </nav>
+
+            <div class="nav-middle">
+                <a href="index.html">
+                    <img src="assets/images/Logo.png" alt="Logo" class="header-logo">
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="بحث ...">
+                </div>
+                
+                <div class="icon-group desktop-only">
+                    <a href="#" class="login-link">
+                        <i class="fa-regular fa-user"></i>
+                        <span>تسجيل الدخول</span>
+                    </a>
+                    <a href="#" class="icon-link">
+                        <i class="fa-solid fa-gift"></i>
+                    </a>
+                    <a href="#" class="cart-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <aside class="mobile-sidebar" id="sidebar">
+        <div class="close-menu" id="close-btn">&times;</div>
+        <div class="sidebar-section">
+            <h4>الصفحات</h4>
+            <a href="index.html">الرئيسية</a>
+            <a href="about_us.html">من نحن</a>
+            <a href="blog.html">المدونة</a>
+            <a href="products.html">المنتجات</a>
+            <a href="contact.html">اتصل بنا</a>
+        </div>
+        <hr>
+        <div class="sidebar-section">
+            <h4>الحساب والأدوات</h4>
+            <a href="#"><i class="fa-regular fa-user"></i> تسجيل الدخول</a>
+            <a href="#"><i class="fa-solid fa-gift"></i> الهدايا</a>
+            <a href="#" class="mobile-cart-trigger"><i class="fa-solid fa-bag-shopping"></i> عربة التسوق</a>
+        </div>
+    </aside>
+
+    <main class="checkout-page">
+        <div class="checkout-container">
+            
+            <div class="order-summary">
+                <h3>ملخص الطلب</h3>
+                <div id="checkout-items-list"></div>
+                
+                <div class="summary-totals">
+                    <div class="total-row">
+                        <span>رسوم التوصيل:</span>
+                        <span>10.00 د.ل</span>
+                    </div>
+                    <hr>
+                    <div class="total-row grand-total">
+                        <span>الإجمالي الكلي:</span>
+                        <span id="final-total">0.00 د.ل</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-details">
+                <h2 class="checkout-title">تفاصيل الشحن</h2>
+                <form id="checkout-form">
+                    <div class="input-group">
+                        <label>الاسم الكامل</label>
+                        <input type="text" id="user_name" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>رقم الهاتف</label>
+                            <input type="tel" id="user_phone" placeholder="09XXXXXXXX" required>
+                        </div>
+                        <div class="input-group">
+                            <label>المدينة</label>
+                            <input type="text" id="user_city" placeholder="طرابلس، بنغازي..." required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>العنوان بالتفصيل</label>
+                        <textarea id="user_address" rows="3" placeholder="اسم الشارع، رقم المبنى، علامة مميزة" required></textarea>
+                    </div>
+
+                    <div class="payment-selection">
+                        <h3>طريقة الدفع</h3>
+                        <label class="payment-card">
+                            <span>الدفع عند الاستلام</span>
+                            <input type="radio" name="payment" checked>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="place-order-btn">تأكيد الطلب</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+<footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/images/Logo.png" alt="M-Farmacy Logo">
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 إم-فارمسي. بواسطة: مالك مملوك, سفيان الخطابي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. منطق قائمة الموبايل ---
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuBtn && closeBtn && sidebar) {
+            menuBtn.addEventListener('click', () => sidebar.classList.add('active'));
+            closeBtn.addEventListener('click', () => sidebar.classList.remove('active'));
+        }
+
+        // --- 2. تحميل السلة وعرض ملخص الطلب ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // جلب البيانات من الذاكرة المحلية
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const finalTotalElement = document.getElementById('final-total');
+            const itemsList = document.getElementById('checkout-items-list');
+
+            // التحقق إذا كانت السلة فارغة
+            if (cart.length === 0) {
+                itemsList.innerHTML = '<p style="text-align:center; padding:20px;">السلة فارغة</p>';
+                return;
+            }
+
+            let totalSum = 0;
+            itemsList.innerHTML = ''; 
+
+            // تكرار عرض العناصر وحساب المجموع
+            cart.forEach(item => {
+                totalSum += item.price * item.quantity;
+                itemsList.innerHTML += `
+                    <div style="display:flex; justify-content:space-between; margin-bottom:10px; font-size:14px;">
+                        <span>${item.name} (x${item.quantity})</span>
+                        <span>${(item.price * item.quantity).toFixed(2)} د.ل</span>
+                    </div>
+                `;
+            });
+
+            // تحديث الإجمالي النهائي (المجموع + 10 رسوم شحن)
+            if (finalTotalElement) {
+                finalTotalElement.innerText = `${(totalSum + 10).toFixed(2)} د.ل`;
+            }
+        });
+
+        // --- 3. معالجة إرسال النموذج (تأكيد الطلب) ---
+        document.getElementById('checkout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            if (cart.length === 0) {
+                alert("سلتك فارغة!");
+                return;
+            }
+
+            // عرض رسالة نجاح للمستخدم
+            alert("شكراً لك! تم استلام طلبك بنجاح وسنتواصل معك قريباً.");
+
+            // مسح السلة من ذاكرة المتصفح بعد نجاح الطلب
+            localStorage.removeItem('cart'); 
+            
+            // إعادة التوجيه للصفحة الرئيسية
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

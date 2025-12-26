@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Farmacy | المنتجات</title>
+    <link rel="icon" type="image/png" href="assets/images/Favorite_Icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <nav class="nav-left">
+                <a href="index.html" class="nav-link">الرئيسية</a> 
+                <a href="about_us.html" class="nav-link">من نحن</a>
+                <a href="blog.html" class="nav-link">المدونة</a>
+                <a href="products.html" class="nav-link active">المنتجات</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </nav>
+
+            <div class="nav-middle">
+                <a href="index.html">
+                    <img src="assets/images/Logo.png" alt="Logo" class="header-logo">
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="بحث عن منتج...">
+                </div>
+                
+                <div class="icon-group desktop-only">
+                    <a href="#" class="login-link">
+                        <i class="fa-regular fa-user"></i>
+                        <span>تسجيل الدخول</span>
+                    </a>
+                    <a href="#" class="icon-link">
+                        <i class="fa-solid fa-gift"></i>
+                    </a>
+                    <a href="#" class="cart-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <aside class="mobile-sidebar" id="sidebar">
+        <div class="close-menu" id="close-btn">&times;</div>
+        <div class="sidebar-section">
+            <h4>الصفحات</h4>
+            <a href="index.html">الرئيسية</a>
+            <a href="about_us.html">من نحن</a>
+            <a href="blog.html">المدونة</a>
+            <a href="products.html" class="active">المنتجات</a>
+            <a href="contact.html">اتصل بنا</a>
+        </div>
+        <hr>
+        <div class="sidebar-section">
+            <h4>الحساب والأدوات</h4>
+            <a href="#"><i class="fa-regular fa-user"></i> تسجيل الدخول</a>
+            <a href="#"><i class="fa-solid fa-gift"></i> الهدايا</a>
+            <a href="#" class="mobile-cart-trigger"><i class="fa-solid fa-bag-shopping"></i> عربة التسوق</a>
+        </div>
+    </aside>
+
+    <main class="products-page-container">
+        
+        <aside class="filters-sidebar">
+            <h3>تصفية البحث</h3>
+            
+            <div class="filter-group">
+                <h4>الفئات</h4>
+                <label><input type="checkbox" class="category-filter" value="popular"> الأكثر رواجاً</label>
+                <label><input type="checkbox" class="category-filter" value="face"> العناية بالوجه</label>
+                <label><input type="checkbox" class="category-filter" value="hair"> العناية بالشعر</label>
+                <label><input type="checkbox" class="category-filter" value="body"> مرطبات الجسم</label>
+                <label><input type="checkbox" class="category-filter" value="oils"> زيوت طبيعية</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>السعر (أقصى حد)</h4>
+                <input type="range" min="10" max="500" value="500" class="price-slider" id="price-range">
+                <div class="price-labels">
+                    <span>10 د.ل</span>
+                    <span id="price-value">500 د.ل</span>
+                </div>
+            </div>
+            <button class="reset-filters" id="reset-btn">إعادة ضبط</button>
+        </aside>
+
+        <div class="products-main-content">
+            
+            <div id="no-products" style="display:none; text-align:center; padding: 50px;">
+                <p>عذراً، لا توجد منتجات تطابق خيارات البحث.</p>
+            </div>
+
+            <section class="category-section" id="popular-section">
+                <h2 class="category-title">الأكثر رواجاً</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="popular" data-price="120">
+                        <a href="#" class="product-link">
+                            <div class="product-img-wrap"><img src="assets/images/p1.png" alt="Product"></div>
+                            <div class="product-info">
+                                <h4 class="product-name">مجموعة العناية المتكاملة</h4>
+                                <p class="company-name">بواسطة: فارمسي جاردن</p>
+                                <p class="price">120.00 د.ل</p>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">أضف للسلة</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-section" id="face-section">
+                <h2 class="category-title">العناية بالوجه</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="face" data-price="45">
+                        <a href="#" class="product-link">
+                            <div class="product-img-wrap"><img src="assets/images/p3.png" alt="Product"></div>
+                            <div class="product-info">
+                                <h4 class="product-name">غسول الوجه العضوي</h4>
+                                <p class="company-name">بواسطة: فارمسي جاردن</p>
+                                <p class="price">45.00 د.ل</p>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">أضف للسلة</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-section" id="hair-section">
+                <h2 class="category-title">العناية بالشعر</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="hair" data-price="45">
+                        <a href="#" class="product-link">
+                            <div class="product-img-wrap"><img src="assets/images/p2.png" alt="Product"></div>
+                            <div class="product-info">
+                                <h4 class="product-name">شامبو مقوي للشعر</h4>
+                                <p class="company-name">بواسطة: فارمسي جاردن</p>
+                                <p class="price">45.00 د.ل</p>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">أضف للسلة</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-section" id="body-section">
+                <h2 class="category-title">مرطبات الجسم</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="body" data-price="35">
+                        <a href="#" class="product-link">
+                            <div class="product-img-wrap"><img src="assets/images/p2.png" alt="Product"></div>
+                            <div class="product-info">
+                                <h4 class="product-name">لوشن مرطب</h4>
+                                <p class="company-name">بواسطة: فارمسي جاردن</p>
+                                <p class="price">35.00 د.ل</p>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">أضف للسلة</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="category-section" id="oils-section">
+                <h2 class="category-title">زيوت طبيعية</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="oils" data-price="50">
+                        <a href="#" class="product-link">
+                            <div class="product-img-wrap"><img src="assets/images/p2.png" alt="Product"></div>
+                            <div class="product-info">
+                                <h4 class="product-name">زيت اللوز الحلو</h4>
+                                <p class="company-name">بواسطة: فارمسي جاردن</p>
+                                <p class="price">50.00 د.ل</p>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">أضف للسلة</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>عربة التسوق</h3>
+            <span class="close-cart" id="close-cart">&times;</span>
+        </div>
+        <div class="cart-body" id="cart-items-container">
+            </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>المجموع الكلي:</span>
+                <span id="cart-total-amount">0.00 د.ل</span>
+            </div>
+            <button class="checkout-btn">إتمام الشراء</button>
+        </div>
+    </aside>
+
+    <div id="cart-toast" class="cart-toast">تم إضافة المنتج إلى السلة بنجاح!</div>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" id="modal-img" alt="Product Image">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-name">اسم المنتج</h2>
+                    <p class="modal-price" id="modal-price">0.00 د.ل</p>
+                    <p class="modal-description" id="modal-desc">هذا المنتج طبيعي 100% ومختبر طبياً للعناية الفائقة بجمالك.</p>
+                    <div class="quantity-selector">
+                        <label>الكمية:</label>
+                        <input type="number" id="modal-qty" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart-btn-large">أضف إلى السلة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/images/Logo.png" alt="M-Farmacy Logo">
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 إم-فارمسي. بواسطة: مالك مملوك, سفيان الخطابي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * 1. تعريف العناصر الأساسية لواجهة المستخدم
+         */
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const sidebar = document.getElementById('sidebar');
+        const cartSidebar = document.getElementById('cart-sidebar');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const closeCart = document.getElementById('close-cart');
+        const cartIcon = document.querySelector('.cart-icon');
+        const mobileCartTrigger = document.querySelector('.mobile-cart-trigger');
+        const toast = document.getElementById('cart-toast');
+
+        // استرجاع بيانات العربة من ذاكرة المتصفح
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        updateCartUI();
+
+        /**
+         * 2. وظائف القوائم الجانبية (الموبايل والعربة)
+         */
+        menuBtn.onclick = () => sidebar.classList.add('active');
+        closeBtn.onclick = () => sidebar.classList.remove('active');
+
+        function toggleCart() {
+            cartSidebar.classList.toggle('active');
+            cartOverlay.classList.toggle('active');
+            document.body.style.overflow = cartSidebar.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        cartIcon.onclick = (e) => { e.preventDefault(); toggleCart(); };
+        mobileCartTrigger.onclick = (e) => { e.preventDefault(); sidebar.classList.remove('active'); toggleCart(); };
+        closeCart.onclick = toggleCart;
+        cartOverlay.onclick = toggleCart;
+
+        /**
+         * 3. وظائف تصفية وفلترة المنتجات
+         */
+        function filterProducts() {
+            const activeCategories = Array.from(document.querySelectorAll('.category-filter:checked')).map(i => i.value);
+            const maxPrice = parseInt(document.getElementById('price-range').value);
+            const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+            let visibleTotal = 0;
+
+            document.querySelectorAll('.product-card').forEach(card => {
+                const category = card.getAttribute('data-category');
+                const price = parseFloat(card.getAttribute('data-price'));
+                const name = card.querySelector('.product-name').innerText.toLowerCase();
+
+                const matchesCat = activeCategories.length === 0 || activeCategories.includes(category);
+                const matchesPrice = price <= maxPrice;
+                const matchesSearch = name.includes(searchTerm);
+
+                if (matchesCat && matchesPrice && matchesSearch) {
+                    card.style.display = "flex";
+                    visibleTotal++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // إظهار أو إخفاء أقسام التصنيفات بناءً على النتائج
+            document.querySelectorAll('.category-section').forEach(section => {
+                const hasVisible = Array.from(section.querySelectorAll('.product-card')).some(c => c.style.display !== 'none');
+                section.style.display = hasVisible ? 'block' : 'none';
+            });
+
+            document.getElementById('no-products').style.display = visibleTotal === 0 ? 'block' : 'none';
+            document.getElementById('price-value').innerText = maxPrice + " د.ل";
+        }
+
+        /**
+         * 4. وظائف عربة التسوق الأساسية
+         */
+        function addToCart(name, price, image, qty = 1) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += qty;
+            } else {
+                cart.push({ name, price, image, quantity: qty });
+            }
+            saveCart();
+            showSuccessToast();
+        }
+
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cart-items-container');
+            const totalDisplay = document.getElementById('cart-total-amount');
+            container.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+                container.innerHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="item-details">
+                            <h4>${item.name}</h4>
+                            <p class="item-price">${item.price.toFixed(2)} د.ل</p>
+                            <div class="quantity-controls">
+                                <button onclick="changeQty(${index}, -1)" class="qty-btn">-</button>
+                                <input type="number" value="${item.quantity}" readonly>
+                                <button onclick="changeQty(${index}, 1)" class="qty-btn">+</button>
+                            </div>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="remove-item"><i class="fa-solid fa-trash"></i></button>
+                    </div>`;
+            });
+            totalDisplay.innerText = total.toFixed(2) + " د.ل";
+        }
+
+        window.changeQty = function(index, delta) {
+            if (cart[index].quantity + delta > 0) {
+                cart[index].quantity += delta;
+                saveCart();
+            }
+        };
+
+        window.removeFromCart = function(index) {
+            cart.splice(index, 1);
+            saveCart();
+        };
+
+        function showSuccessToast() {
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        /**
+         * 5. التعامل مع أحداث الضغط (إضافة للسلة، فتح المودال)
+         */
+        document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+            btn.onclick = () => {
+                const card = btn.closest('.product-card');
+                addToCart(
+                    card.querySelector('.product-name').innerText,
+                    parseFloat(card.getAttribute('data-price')),
+                    card.querySelector('img').src
+                );
+            };
+        });
+
+        const modal = document.getElementById('product-modal');
+        document.querySelectorAll('.product-link').forEach(link => {
+            link.onclick = (e) => {
+                e.preventDefault();
+                const card = link.closest('.product-card');
+                document.getElementById('modal-name').innerText = card.querySelector('.product-name').innerText;
+                document.getElementById('modal-price').innerText = card.querySelector('.price').innerText;
+                document.getElementById('modal-img').src = card.querySelector('img').src;
+                document.getElementById('modal-qty').value = 1;
+                modal.style.display = "block";
+            };
+        });
+
+        document.querySelector('.close-modal').onclick = () => modal.style.display = "none";
+        document.querySelector('.add-to-cart-btn-large').onclick = () => {
+            const price = parseFloat(document.getElementById('modal-price').innerText.replace(/[^\d.]/g, ''));
+            addToCart(
+                document.getElementById('modal-name').innerText,
+                price,
+                document.getElementById('modal-img').src,
+                parseInt(document.getElementById('modal-qty').value)
+            );
+            modal.style.display = "none";
+        };
+
+        /**
+         * 6. تفعيل الفلاتر وزر إتمام الشراء
+         */
+        document.querySelectorAll('.category-filter').forEach(box => box.onchange = filterProducts);
+        document.getElementById('price-range').oninput = filterProducts;
+        document.getElementById('search-input').oninput = filterProducts;
+        document.getElementById('reset-btn').onclick = () => {
+            document.querySelectorAll('.category-filter').forEach(box => box.checked = false);
+            document.getElementById('price-range').value = 500;
+            document.getElementById('search-input').value = "";
+            filterProducts();
+        };
+
+        document.querySelector('.checkout-btn').onclick = () => {
+            if (cart.length === 0) {
+                alert("سلتك فارغة! أضف بعض المنتجات أولاً.");
+            } else {
+                window.location.href = 'checkout.html';
+            }
+        };
+
+    </script>
+</body>
+</html>
